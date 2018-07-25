@@ -10,7 +10,7 @@ class Content extends Component {
   static propTypes = {
     body: PropTypes.object.isRequired
   };
-/* EJEMPLO DE STATE
+
   constructor(){
     super();
     this.state = {
@@ -61,9 +61,11 @@ class Content extends Component {
     }
   }
 
-  [ESTO ESTABA DENTRO DEL <div></div>]
-
-   <h1> Counter: { this.state.count } </h1>
+  render() {
+    const { body } = this.props;
+    return (
+      <div className="Content">
+       <h1> Counter: { this.state.count } </h1>
        <p>
          <button id = "add" onClick = {this.handleCountCLick}>+</button>
          <button id = "subtract" onClick = {this.handleCountCLick}>-</button>
@@ -80,11 +82,7 @@ class Content extends Component {
          <button id = "result" onClick = {this.handleResultCLick}>=</button>
          {this.state.result}
        </p>
-*/
-  render() {
-    const { body } = this.props;
-    return (
-      <div className="Content">
+       
         { body }
       </div>
     );
