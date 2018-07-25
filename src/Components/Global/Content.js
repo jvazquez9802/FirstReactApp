@@ -62,7 +62,6 @@ class Content extends Component {
   }
 
   render() {
-    const { body } = this.props;
     return (
       <div className="Content">
        <h1> Counter: { this.state.count } </h1>
@@ -82,8 +81,6 @@ class Content extends Component {
          <button id = "result" onClick = {this.handleResultCLick}>=</button>
          {this.state.result}
        </p>
-       
-        { body }
       </div>
     );
   }
